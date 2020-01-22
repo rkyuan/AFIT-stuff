@@ -1,9 +1,0 @@
-function x_out = SpaceX_student_function(x_in,thrust)
-%UNTITLED2 Summary of this function goes here
-%   Detailed explanation goes here
-u_step = [thrust;-3000]
-
-x_out = evalin('base' ,'system_d.A')*x_in + system_d.B*u_step')
-
-end
-

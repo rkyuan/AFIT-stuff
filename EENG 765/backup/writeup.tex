@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+
+%  Packages
+\usepackage[
+   paperheight = 11.0in,
+   paperwidth = 8.5in,
+   tmargin = 1in,
+   bmargin = 1in,
+   lmargin = 1in,
+   rmargin = 1in,
+   footskip = 0.50in] {geometry}
+\usepackage{float} %  better floats
+\usepackage{enumitem} %  better enumerations
+\usepackage{amsmath} %  better math layout
+\usepackage{bm} %  bold math (must be after amsmath)
+\usepackage{cancel} %  strick-through in equations
+\usepackage{tikz} %  drawing
+\usepackage{color} %  custom colors
+\usepackage[breakable, theorems, skins]{tcolorbox}
+\usepackage{listings, upquote} %  "\lstinline{ }" for inline code
+\usepackage[
+   colorlinks = true,
+   linkcolor = blue,
+   urlcolor = blue,
+   hypertexnames = false]{hyperref}
+
+%  Parameters
+\setlength\emergencystretch{\hsize}
+\setlength{\arraycolsep}{2pt} %  matrix column spacing
+\renewcommand{\arraystretch}{1.4} %  matrix row spacing
+\newtcolorbox{example}{
+   breakable,
+   colframe = shade,
+   colback = shade,
+   before skip = 10pt,
+   after skip = 10pt}
+
+%  Custom macros
+\renewcommand{\vec}[1]     {\bm{#1}} %  vectors
+\newcommand{\mat}[1]       {\bm{#1}} %  matrices
+\renewcommand{\exp}[1]     {\mathrm{e}^{#1}}
+\renewcommand{\cos}[2][]   {\mathrm{cos}^{#1}\!\left( {#2} \right)}
+\renewcommand{\sin}[2][]   {\mathrm{sin}^{#1}\!\left( {#2} \right)}
+\renewcommand{\tan}[2][]   {\mathrm{tan}^{#1}\!\left( {#2} \right)}
+\newcommand{\acos}[1]      {\mathrm{acos}\!\left( {#1} \right)}
+\newcommand{\asin}[1]      {\mathrm{asin}\!\left( {#1} \right)}
+\newcommand{\atan}[1]      {\mathrm{atan}\!\left( {#1} \right)}
+\renewcommand{\log}[2][]   {\mathrm{log}_{#1}\!\left( {#2} \right)}
+\newcommand{\EE}[2]        {{#1}\textsc{e}\mathrm{#2}}
+
+\definecolor{red}          {rgb}{1.00,0.00,0.00}
+\definecolor{orange}       {rgb}{1.00,0.50,0.00}
+\definecolor{yellow}       {rgb}{1.00,0.83,0.00}
+\definecolor{green}        {rgb}{0.00,0.60,0.00}
+\definecolor{cyan}         {rgb}{0.00,0.90,0.90}
+\definecolor{blue}         {rgb}{0.00,0.50,1.00}
+\definecolor{purple}       {rgb}{0.50,0.00,1.00}
+\definecolor{magenta}      {rgb}{1.00,0.00,1.00}
+\definecolor{gray}         {rgb}{0.50,0.50,0.50}
+\definecolor{shade}        {rgb}{0.95,0.95,0.95}
+
+\lstdefinestyle{lstMat} {
+   language = matlab,
+   backgroundcolor = {},
+   breakatwhitespace = true,
+   breaklines = true,
+   showstringspaces = false,
+   basicstyle = %
+   \lst@ifdisplaystyle\footnotesize\fi
+   \ttfamily, %  48 chars in 3.5 in
+   commentstyle = \color{green},
+   stringstyle = \color{magenta},
+   tabsize = 3,
+   upquote = true}
+\lstset{style = lstMat}
+
+\title{Lab 1 Report}
+\author{Rick Yuan}
+
+\begin{document}
+
+\maketitle
+
+%\ref{eq1}
+
+\begin{equation}
+	x=y
+	\label{eq1}
+\end{equation}
+
+\begin{lstlisting}[style=lstMat]
+This is a test. 
+\ref{eq1}
+
+
+
+
+\end{lstlisting}
+
+\end{document}
+

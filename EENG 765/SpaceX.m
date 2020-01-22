@@ -89,6 +89,8 @@ global quit;
 quit = false;
 global input;
 input = 0;
+Thrust_data = load('SpaceX_Winning_Inputs.mat');
+Thrust_data = Thrust_data.inputs_saved;
 axes(handles.axes1)
 axis([0 100 0 100])
 x = [80, -10]';
@@ -96,6 +98,7 @@ fuel = 50;
 inputs_saved = zeros(1,9999);
 
 for i = 1:9e9
+    input = Thrust_data(i)
     if quit
         break;
     end
