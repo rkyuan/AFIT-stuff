@@ -1,0 +1,11 @@
+*.jpg
+*.pdf
+*.png
+
+*.m~
+
+*.aux
+*.log
+*.out
+*.synctex.gz
+
